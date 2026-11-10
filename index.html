@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rotation Vault</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <button id="navbtn" class="icon" aria-label="Toggle sidebar">☰</button>
+    <a href="#/n/start-here" class="brand">⟳ Rotation Vault <small>EF 151 · Exam 4</small></a>
+    <button id="searchbtn" class="search">🔍<span> Jump to anything…</span> <kbd>Ctrl K</kbd></button>
+    <nav>
+      <a href="#/graph" title="Graph view">🕸️<span> Graph</span></a>
+      <a href="#/quiz/mix" title="Brain game">🧠<span> Play</span></a>
+      <a href="#/cards/" title="Flashcards">🃏<span> Cards</span></a>
+      <a href="#/progress" title="Progress">📈<span> Progress</span></a>
+      <button id="themebtn" class="icon" aria-label="Toggle light/dark">◐</button>
+    </nav>
+  </header>
+  <div class="layout">
+    <aside id="left">
+      <input id="filter" placeholder="Filter notes…" aria-label="Filter notes">
+      <div id="tree"></div>
+    </aside>
+    <main id="main" tabindex="-1"></main>
+    <aside id="right">
+      <div class="ptitle">Local graph</div>
+      <div id="localgraph"></div>
+      <div class="ptitle">Linked from (backlinks)</div>
+      <ul id="backlinks" class="links"></ul>
+      <div class="ptitle">Links to</div>
+      <ul id="outlinks" class="links"></ul>
+    </aside>
+  </div>
+  <div id="palette" hidden>
+    <div class="pbox"><input placeholder="Type a concept, exam, or problem…" aria-label="Search notes"><ul></ul></div>
+  </div>
+  <script src="js/concepts.js"></script>
+  <script src="js/problems.js"></script>
+  <script src="js/graph.js"></script>
+  <script src="js/widgets.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
